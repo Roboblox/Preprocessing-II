@@ -35,6 +35,7 @@
     }
   }
   .content-bus {
+    border-bottom: 2px dashed @navigation-border;
     img {
       width: 100%;
     }
@@ -57,6 +58,16 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        width: 18rem;
+        height: 4rem;
+        border-radius: 1.5rem;
+        .btn-mixin(white, #4281f5);
+        line-height: 4rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
     }
   }
 } // home
