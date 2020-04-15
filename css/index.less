@@ -178,29 +178,53 @@ img {
 header {
   width: 100%;
   height: 10vh;
-  justify-self: center;
-  align-self: flex-end;
-  border-bottom: 4px dotted grey;
+  display: flex;
+}
+@media (max-width: 500px) {
+  header {
+    margin-bottom: 10rem;
+  }
 }
 header nav {
   width: 80%;
   height: 10vh;
+  border: 2px solid red;
+  margin-left: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+  }
+}
 header nav h1 {
-  margin-left: 12rem;
+  margin-left: 8rem;
+}
+@media (max-width: 500px) {
+  header nav h1 {
+    margin-left: 0;
+  }
 }
 header nav .links {
+  border: 2px solid red;
   display: flex;
   justify-content: space-between;
-  width: 55%;
+  width: 60%;
+}
+@media (max-width: 500px) {
+  header nav .links {
+    align-items: space-between;
+  }
 }
 header nav .links a {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 600;
+  color: #2f2e40;
   font-family: "Roboto", sans-serif;
 }
 .footer {
@@ -221,6 +245,12 @@ header nav .links a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
@@ -236,6 +266,12 @@ header nav .links a {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .home .inverse-content .text-content {
   padding-left: 1%;
   padding-right: 0;
@@ -246,9 +282,11 @@ header nav .links a {
 }
 .home .content-bus {
   border-bottom: 2px dashed #C0C0C0;
+  border-top: 2px dashed #C0C0C0;
 }
 .home .content-bus img {
   width: 100%;
+  margin-bottom: 2rem;
 }
 .home .content-destination {
   width: 75%;
@@ -261,11 +299,26 @@ header nav .links a {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
-  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .home .content-pick {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5rem;
+    justify-content: space-between;
+  }
 }
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .home .content-pick .destination .btn {
   width: 18rem;

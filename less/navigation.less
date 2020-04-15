@@ -4,29 +4,40 @@
 @mainBG-color: #334e66;
 @mainFont-color: coral;
 @main-font: "Roboto", sans-serif;
-
+@max500: ~"(max-width: 500px)";
 header {
   width: 100%;
   height: 10vh;
-  justify-self: center;
-  align-self: flex-end;
-  border-bottom: 4px dotted grey;
+  display: flex;
 
+  @media @max500 {
+    margin-bottom: 10rem;
+  }
   nav {
     width: 80%;
     height: 10vh;
-
+    margin-left: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media @max500 {
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: center;
+    }
     h1 {
-      margin-left: 12rem;
+      margin-left: 8rem;
+      @media @max500 {
+        margin-left: 0;
+      }
     }
     .links {
       display: flex;
       justify-content: space-between;
-      width: 55%;
+      @media @max500 {
+        align-items: space-between;
+      }
+      width: 60%;
       a {
         text-decoration: none;
         font-size: 1.6rem;
